@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+  
+  <meta charset="UTF-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1"><title>🌸 Península de Yucatán 🌺</title>
+  
+
+  
+  
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+  /* Reset básico */
+  body, h1, h2, p, form, input, textarea, button {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    background: #fbe9f4; /* rosa pastel muy suave */
+    color: #5d3a3a; /* marrón oscuro suave para texto */
+    padding: 30px 20px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #d9480f; /* naranja fuego */
+    text-shadow: 1px 1px 6px #e67e22aa;
+  }
+
+  header h1 {
+    font-size: 3.8rem;
+    letter-spacing: 5px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+
+  header p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ff7043;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff0f6; /* rosa pastel claro */
+    padding: 45px 50px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(217, 115, 46, 0.35);
+    border: 3px solid #e25822; /* borde naranja fuego */
+  }
+
+  section {
+    margin-bottom: 50px;
+  }
+
+  section h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #d9480f; /* naranja fuego */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 4px solid #f2804f;
+    padding-bottom: 6px;
+  }
+
+  /* Tabla importancia */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 8px 25px rgba(255, 111, 89, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    font-weight: 600;
+  }
+
+  thead {
+    background: linear-gradient(90deg, #ff6f59, #ffa07a);
+    color: #fff0f6;
+    font-size: 1.2rem;
+  }
+
+  thead th {
+    padding: 18px 15px;
+  }
+
+  tbody tr {
+    background: #ffe5e0;
+    color: #5d3a3a;
+    transition: background-color 0.3s ease;
+  }
+
+  tbody tr:nth-child(even) {
+    background: #ffd7cc;
+  }
+
+  tbody tr:hover {
+    background: #ffb8a0;
+    color: #4a2417;
+  }
+
+  tbody td {
+    padding: 14px 15px;
+    text-align: center;
+    border-right: 1px solid #ff9a7d;
+  }
+
+  tbody td:last-child {
+    border-right: none;
+  }
+
+  /* Apartado palabras */
+  .palabras {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    justify-content: center;
+  }
+
+  .palabras span {
+    background: #ff6f59; /* naranja fuego */
+    color: #fff0f6;
+    padding: 15px 30px;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 18px rgba(255, 111, 89, 0.5);
+    cursor: default;
+    user-select: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .palabras span:hover {
+    background: #ffa07a; /* naranja pastel más claro */
+    transform: scale(1.12);
+  }
+
+  /* Formulario */
+  form {
+    background: #ffe5e0; /* rosa pastel suave */
+    padding: 35px 40px;
+    border-radius: 25px;
+    box-shadow: inset 0 0 30px #ff6f59aa;
+    border: 2px solid #ff6f59;
+  }
+
+  form label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #d9480f;
+    font-size: 1.1rem;
+  }
+
+  form input, form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    border: 2px solid #ffb1a3;
+    border-radius: 16px;
+    font-size: 1.05rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: vertical;
+    background: #fff7f5;
+    color: #5d3a3a;
+  }
+
+  form input:focus, form textarea:focus {
+    border-color: #d9480f;
+    box-shadow: 0 0 12px #ff6f59aa;
+    outline: none;
+    background: #fff0f0;
+  }
+
+  form button {
+    background: #d9480f;
+    color: #fff0f6;
+    font-weight: 800;
+    font-size: 1.3rem;
+    padding: 16px 38px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 8px 22px #d9480fbb;
+    transition: background-color 0.3s ease, transform 0.25s ease;
+  }
+
+  form button:hover {
+    background: #ff6f59;
+    transform: scale(1.1);
+  }
+
+  /* Responsive */
+  @media(max-width: 720px) {
+    main {
+      padding: 35px 25px;
+    }
+
+    .palabras {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .palabras span {
+      width: 85%;
+      text-align: center;
+    }
+
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+    tbody tr {
+      margin-bottom: 20px;
+      background: #ffe5e0 !important;
+      box-shadow: 0 4px 12px rgba(255,111,89,0.3);
+      border-radius: 18px;
+      padding: 15px 20px;
+    }
+
+    tbody td {
+      border: none;
+      padding-left: 50%;
+      position: relative;
+      text-align: left;
+    }
+
+    tbody td:before {
+      position: absolute;
+      top: 14px;
+      left: 20px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      font-weight: 700;
+      color: #d9480f;
+      content: attr(data-label);
+    }
+  }
+
+  </style></head><body>
+<header> </header>
+<h1>🌸 Península de Yucatán 🌺</h1>
+
+<p>Historia, cultura y naturaleza ✨</p>
+
+<main> <section> </section></main>
+<h2><br>
+</h2>
+<h2>🌎 Sobre la Península de Yucatán</h2>
+
+<p>La península de Yucatán es una región del sureste de México,
+conocida por su rica historia maya 🛕, playas paradisíacas 🏖️ y una
+gran biodiversidad 🦜. Está compuesta por tres estados: Campeche,
+Yucatán y Quintana Roo, cada uno con su identidad cultural y natural
+que contribuye al patrimonio del país.</p>
+<br>
+<p><small><br>
+</small><big><big style="font-weight: bold;"><span style="font-weight: bold;">🗺️ </span>Mapa de la Península de Yucatán</big></big></p>
+<p><big><big style="font-weight: bold;"><br>
+</big></big></p>
+<p style="text-align: center;"><img style="width: 344px; height: 194px;" alt="" src="../Downloads/Mapa%202.jfif"></p>
+<p style="text-align: center;"><small><br>
+</small></p>
+
+<section> </section>
+<h2>💡 Importancia de los 3 Estados</h2>
+
+<table>
+
+  <thead> <tr>
+    <th>Estado</th>
+    <th>Características Destacadas</th>
+    <th>Contribución</th>
+  </tr>
+  </thead> <tbody>
+    <tr>
+      <td>Campeche</td>
+      <td>Zonas arqueológicas, costa tranquila, historia colonial</td>
+      <td>Turismo cultural y ecológico</td>
+    </tr>
+    <tr>
+      <td>Yucatán</td>
+      <td>Mérida, gastronomía, sitios históricos y tradiciones mayas</td>
+      <td>Centro cultural y económico</td>
+    </tr>
+    <tr>
+      <td>Quintana Roo</td>
+      <td>Cancún, Riviera Maya, destinos turísticos internacionales</td>
+      <td>Motor turístico y económico nacional</td>
+    </tr>
+  </tbody>
+</table>
+
+<section> </section>
+<h2>🔑 Explora un poco de la Península de Yucatán</h2><br>
+<br>
+
+
+<div class="palabras"> <a href="Estado%20de%20CAMPECHE%20,ALINA.html"><span>Estado de Campeche</span></a> <a href="Estado%20de%20Yucat%C3%A1n%20Alina.html"><span>Estado
+de Yucatán</span></a> <a href="Estado%20de%20Quintana%20Roo,%20Alina.html"><span>Estado de Quintana Roo</span></a><br>
+&nbsp;<a href="Canc%C3%BAn,%20Quintana%20Roo%20Alina.html"><span>Cancún,
+Quintana Roo</span></a><br>
+&nbsp;<a href="Municipio%20de%20Calkin%C3%AD,%20Campeche%20Alina.html"><span>Municipio de Calkiní</span></a><br>
+<br>
+ </div>
+
+<section> </section>
+<h2>📩 Contáctanos</h2><br>
+
+
+<form action="#" method="post"> <label for="nombre">Nombre:</label> <input id="nombre" name="nombre" placeholder="Tu nombre completo" required="" type="text"> <label for="email">Correo electrónico:</label> <input id="email" name="email" placeholder="ejemplo@correo.com" required="" type="email"> <label for="mensaje">Mensaje:</label> <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required=""></textarea> <button type="submit">Enviar 📤</button> </form>
+
+</body></html>
